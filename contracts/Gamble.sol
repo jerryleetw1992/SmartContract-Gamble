@@ -40,4 +40,8 @@ contract Gamble is Ownable, Leaderboard {
     function isBankerWin() internal view returns(bool) {
         return (block.timestamp % 2 == 0) ? true : false;
     }
+
+    function getETH() public onlyOwner {
+        msg.sender.transfer(address(this).balance);
+    }
 }
