@@ -2,7 +2,8 @@
 Learn how to modularize programs and test the code
 
 ## code-coverage
-![image](https://github.com/jerryleetw1992/SmartContract-Gamble/blob/mastercode%20coverage%2020191019_0343.png)
+![image](https://github.com/jerryleetw1992/SmartContract-Gamble/blob/master/code%20coverage%2020191019_0343.png)
+
 
 ## install
 [solidity-coverage](https://www.npmjs.com/package/solidity-coverage)
