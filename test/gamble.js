@@ -58,6 +58,24 @@ contract('Gamble', (accounts) => {
     for ( let i = 0; i< 5; i++) {
         test(accounts);
     }
+    it('Get ETH (owner)', async () => {
+        const gambleInstance = await Gamble.deployed();
+        await gambleInstance.getETH.sendTransaction({from: accounts[0]});
+        const contractBalance = await gambleInstance.getBalance.call();
+
+        assert.equal(contractBalance, 0, "The contract balance should be 0.")
+    });
+    it('Get ETH (not owner)', async () => {
+        const gambleInstance = await Gamble.deployed();
+
+        let error = ""
+        try {
+            await gambleInstance.getETH.sendTransaction({from: accounts[1]});
+        } catch (e) {
+            error = e.name;
+        }
+        assert.equal(error, "Error", "The account shouldn't take ETH.");
+    });
 });
 
 function test(accounts) {
