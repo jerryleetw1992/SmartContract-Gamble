@@ -41,7 +41,8 @@ contract Gamble is Ownable, Leaderboard {
         return (block.timestamp % 2 == 0) ? true : false;
     }
 
-    function getETH() public onlyOwner {
-        msg.sender.transfer(address(this).balance);
+    function getETH(uint amount) public onlyOwner {
+        require(address(this).balance > amount, "The contract doesn't have enough ETH.");
+        msg.sender.transfer(amount);
     }
 }

@@ -60,21 +60,36 @@ contract('Gamble', (accounts) => {
     }
     it('Get ETH (owner)', async () => {
         const gambleInstance = await Gamble.deployed();
-        await gambleInstance.getETH.sendTransaction({from: accounts[0]});
-        const contractBalance = await gambleInstance.getBalance.call();
+        const contractBalanceBeforeTake = await gambleInstance.getBalance.call();
+        const takeETH = Web3.utils.toWei('2', 'wei');
+        await gambleInstance.getETH.sendTransaction(takeETH, {from: accounts[0]});
+        const contractBalanceAfterTake = await gambleInstance.getBalance.call();
 
-        assert.equal(contractBalance, 0, "The contract balance should be 0.")
+        assert.equal(contractBalanceAfterTake, contractBalanceBeforeTake - takeETH, "The contract balance should be" + contractBalanceBeforeTake - takeETH + ".");
     });
     it('Get ETH (not owner)', async () => {
         const gambleInstance = await Gamble.deployed();
 
         let error = ""
         try {
-            await gambleInstance.getETH.sendTransaction({from: accounts[1]});
+            await gambleInstance.getETH.sendTransaction(1, {from: accounts[1]});
         } catch (e) {
             error = e.name;
         }
         assert.equal(error, "Error", "The account shouldn't take ETH.");
+    });
+    it('Get ETH (over the contract ETH)', async () => {
+        const gambleInstance = await Gamble.deployed();
+        const contractBalanceBeforeTake = await gambleInstance.getBalance.call();
+        const takeETH = Web3.utils.toWei('100', 'ether');
+        let error = ""
+        try {
+            await gambleInstance.getETH.sendTransaction(takeETH, {from: accounts[0]});
+        } catch (e) {
+            error = e.name;
+        }
+
+        assert.equal(error, "Error", "The contract doesn't have enough ETH.");
     });
 });
 
