@@ -2,7 +2,7 @@
 Learn how to modularize programs and test the code
 
 ## code-coverage
-![image](https://github.com/jerryleetw1992/SmartContract-Gamble/blob/master/code%20coverage%2020191019_0343.png)
+![image](https://github.com/jerryleetw1992/SmartContract-Gamble/blob/master/ccode-coverage.png)
 
 
 ## install
