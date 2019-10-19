@@ -37,7 +37,7 @@ class App extends Component {
   };
 
   getBankerBalance = async() => {
-    const { accounts, contract } = this.state;
+    const { contract } = this.state;
     
     const bankerBalnace = await contract.methods.getBalance().call();
     this.setState({ bankerBalnace: bankerBalnace});
@@ -61,10 +61,16 @@ class App extends Component {
   };
 
   getReturnRate = async() => {
-    const { accounts, contract } = this.state;
+    const { contract } = this.state;
 
     const returnRate = await contract.methods.returnRate().call();
     this.setState({ returnRate: returnRate});
+  };
+
+  getETH = async() => {
+    const { accounts, contract } = this.state;
+    
+    await contract.methods.getETH().send({from: accounts[0]});
   };
 
   render() {
@@ -87,11 +93,14 @@ class App extends Component {
           <button type="button" onClick= {this.getReturnRate}> 取得現在賠率～ </button>
           現在賠率：{this.state.returnRate / 10}
         </p>
-        <h2>以下為～合約擁有者 專屬互動～💕</h2>
+        <h2>以下為～合約擁有者 專屬互動～ 💕</h2>
         <p>
           設定賠率😎
           <input type="text" ref={input => this.returnRate = input} defaultValue="20"/>
           <button type="button" onClick= {this.setReturnRate}> Donate to banker </button>
+        </p>
+        <p>
+        <button type="button" onClick= {this.getETH}> 拿錢囉～～🤩 </button>
         </p>
       </div>
     );
