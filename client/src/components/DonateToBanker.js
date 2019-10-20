@@ -24,9 +24,13 @@ class DonateToBanker extends Component {
     render() {
         return (
             <div>
-                你要捐多少給莊家～
+                你要捐
+                <span>&nbsp;&nbsp;&nbsp;</span>
                 <input type="text" ref={input => this.input = input} defaultValue="1"/>
-                <button type="button" onClick= {this.donateToBanker}> Donate to banker </button>
+                <span>&nbsp;&nbsp;&nbsp;</span>
+                Eth 給莊家～
+                <span>&nbsp;&nbsp;&nbsp;</span>
+                <button type="button" onClick= {this.donateToBanker}> 贊助 </button>
             </div>
         );
     }

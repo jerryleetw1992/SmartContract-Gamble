@@ -19,8 +19,9 @@ class GetBankerBalance extends Component {
     render() {
         return (
             <div>
-                <button type="button" onClick= {this.getBankerBalance}> 查看莊家資本 </button>
                 莊家資本額： {this.state.bankerBalanace}
+                <span>&nbsp;&nbsp;&nbsp;</span>
+                <button type="button" onClick= {this.getBankerBalance}> 查詢 </button>
             </div>
         );
     }

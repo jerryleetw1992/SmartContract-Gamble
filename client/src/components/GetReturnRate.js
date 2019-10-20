@@ -19,8 +19,9 @@ export default class GetReturnRate extends Component {
     render() {
         return (
             <div>
-                <button type="button" onClick= {this.getReturnRate}> 取得現在賠率～ </button>
                 現在賠率：{this.state.returnRate / 10}
+                <span>&nbsp;&nbsp;&nbsp;</span>
+                <button type="button" onClick= {this.getReturnRate}> 查詢 </button>
             </div>
         );
     }
