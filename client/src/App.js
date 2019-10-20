@@ -7,6 +7,7 @@ import GetBankerBalance from './components/GetBankerBalance.js';
 import GetReturnRate from './components/GetReturnRate.js';
 import SetReturnRate from './components/SetReturnRate.js';
 import GetETH from './components/GetETH.js';
+import PlayGame from './components/PlayGame.js';
 
 import "./App.css";
 
@@ -54,7 +55,9 @@ class App extends Component {
                         contract={this.state.contract}/>
         <GetBankerBalance contract={this.state.contract}/>
         <GetReturnRate contract={this.state.contract}/>
-        
+        <PlayGame web3={this.state.web3} 
+                  accounts={this.state.accounts} 
+                  contract={this.state.contract}/>
         <h2>以下為～合約擁有者 專屬互動～ 💕</h2>
         <SetReturnRate  accounts={this.state.accounts} 
                         contract={this.state.contract}/>
