@@ -19,7 +19,7 @@ export default class SetReturnRate extends Component {
     render() {
         return (
             <div>
-                設定賠率😎
+                設定賠率
                 <input type="text" ref={input => this.returnRate = input} defaultValue="20"/>
                 <button type="button" onClick= {this.setReturnRate}> Set </button>
             </div>

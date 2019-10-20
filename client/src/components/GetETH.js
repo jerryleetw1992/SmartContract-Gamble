@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 
 export default class GetETH extends Component {
-
-
     constructor(props) {
         super(props);
         this.state = {
@@ -36,7 +34,7 @@ export default class GetETH extends Component {
                     <option value="gwei">gwei</option>
                     <option value="wei">wei</option>
                 </select>
-                <button type="button" onClick= {this.getETH}> 拿錢囉～～🤩 </button>
+                <button type="button" onClick= {this.getETH}> 拿錢囉～～ </button>
             </div>
         );
     }

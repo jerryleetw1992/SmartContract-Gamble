@@ -24,7 +24,7 @@ export default class PlayGame extends Component {
     render() {
         return (
             <div>
-                <p>賭注多少 ETH（2ETH 以上 and 莊家有足夠錢😅）</p>
+                <p>賭注多少 ETH（2ETH 以上 and 莊家有足夠錢）</p>
                 <input type="text" ref={input => this.input = input}/>
                 <button type="button" onClick= {this.play}> 下注 </button>
                 <p>這次{this.state.winner}贏</p>
