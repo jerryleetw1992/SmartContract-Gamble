@@ -4,6 +4,7 @@ class GetBankerBalance extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            accounts: props.accounts,
             contract: props.contract,
             bankerBalanace: 0
         }

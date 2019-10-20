@@ -58,6 +58,10 @@ class App extends Component {
         <h2>以下為～合約擁有者 專屬互動～ 💕</h2>
         <SetReturnRate  accounts={this.state.accounts} 
                         contract={this.state.contract}/>
+        <GetETH web3={this.state.web3}
+                accounts={this.state.accounts}
+                contract={this.state.contract}/>
+
       </div>
     );
   }

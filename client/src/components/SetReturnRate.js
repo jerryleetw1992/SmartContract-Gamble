@@ -21,7 +21,7 @@ export default class SetReturnRate extends Component {
             <div>
                 設定賠率😎
                 <input type="text" ref={input => this.returnRate = input} defaultValue="20"/>
-                <button type="button" onClick= {this.setReturnRate}> Donate to banker </button>
+                <button type="button" onClick= {this.setReturnRate}> Set </button>
             </div>
         );
     }
