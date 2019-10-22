@@ -7,11 +7,17 @@ Learn how to modularize programs and test the code
 
 ## How to install
 1. [Truffle](https://www.trufflesuite.com/)
-> $ npm install -g truffle
+```
+$ npm install -g truffle
+```
+```
 > $ truffle init
+```
 
 2. [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts)
-> $ npm install @openzeppelin/contracts
+```
+$ npm install @openzeppelin/contracts
+```
 Because our contract will import the Ownable.sol that from OpenZeppelin.
 
 3. write your smart contract in the contracts folder.
@@ -24,10 +30,14 @@ Truffle teaching: [TESTING YOUR CONTRACTS](https://www.trufflesuite.com/docs/tru
 ## How to show testing coverage
 1. Install the solidity-coverage
 [solidity-coverage](https://www.npmjs.com/package/solidity-coverage)
-> npm install --save-dev solidity-coverage
+```
+npm install --save-dev solidity-coverage
+```
 
 2. Run
-> $ npx solidity-coverage
+```
+$ npx solidity-coverage
+```
 **Note** You can see the details at the coverage/index.html
 
 ## How to play
