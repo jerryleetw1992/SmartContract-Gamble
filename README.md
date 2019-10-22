@@ -25,7 +25,7 @@ In this Example, I just write [Gamble](https://github.com/jerryleetw1992/SmartCo
 
 ## How to test
 * write your test code in the test folder. Like: [gamble.js](https://github.com/jerryleetw1992/SmartContract-Gamble/blob/master/test/gamble.js)
-Truffle teaching: [TESTING YOUR CONTRACTS](https://www.trufflesuite.com/docs/truffle/testing/testing-your-contracts)
+> Truffle teaching: [TESTING YOUR CONTRACTS](https://www.trufflesuite.com/docs/truffle/testing/testing-your-contracts)
 
 ## How to show testing coverage
 1. Install the solidity-coverage
