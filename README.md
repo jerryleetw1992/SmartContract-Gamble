@@ -31,7 +31,7 @@ Truffle teaching: [TESTING YOUR CONTRACTS](https://www.trufflesuite.com/docs/tru
 1. Install the solidity-coverage
 [solidity-coverage](https://www.npmjs.com/package/solidity-coverage)
 ```
-npm install --save-dev solidity-coverage
+$ npm install --save-dev solidity-coverage
 ```
 
 2. Run
