@@ -2,7 +2,7 @@
 Learn how to modularize programs and test the code
 
 ## code-coverage
-![image](https://github.com/jerryleetw1992/SmartContract-Gamble/blob/master/ccode-coverage.png)
+![image](https://github.com/jerryleetw1992/SmartContract-Gamble/blob/master/code-coverage.png)
 
 
 ## How to install
@@ -34,5 +34,5 @@ Truffle teaching: [TESTING YOUR CONTRACTS](https://www.trufflesuite.com/docs/tru
 1. The contract owner needs to transfer some ETH to the contract.
 2. The player can send ETH to the wannaPlayAGame function.
 3. The contract will check the block timestamps. If timestamps is even, the contract will win, and vice versa. 
-**Note** This is not a good example for judging win or lose. Because the miner will can set the timestamps to let he/she win.
-More Read: oracle
+> Note This is not a good example for judging win or lose. Because the miner will can set the timestamps to let he/she win.
+> More Read: oracle
