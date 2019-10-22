@@ -11,7 +11,7 @@ Learn how to modularize programs and test the code
 $ npm install -g truffle
 ```
 ```
-> $ truffle init
+$ truffle init
 ```
 
 2. [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts)
