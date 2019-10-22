@@ -6,7 +6,7 @@ Learn how to modularize programs and test the code
 
 
 ## How to install
-1. [truffle](https://www.trufflesuite.com/)
+1. [Truffle](https://www.trufflesuite.com/)
 > $ npm install -g truffle
 > $ truffle init
 
